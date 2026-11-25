@@ -11,6 +11,7 @@ import com.pedropathing.drivetrain.DrivePowers;
 import com.pedropathing.follower.ManualDrive;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
+/*
 @TeleOp(name = "Turret Test")
 public class turretTest extends OpMode {
 
@@ -86,3 +87,4 @@ public class turretTest extends OpMode {
         // to keep the angle in the range of [0,360]
     }
 }
+*/

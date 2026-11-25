@@ -32,6 +32,7 @@ public class fullTeleopTest extends OpMode {
 
     @Override
     public void loop() {
+        // Pedro Pathing's
         DrivePowers powers = ManualDrive.fieldCentric(
                 gamepad1.left_stick_y,
                 gamepad1.left_stick_x,
@@ -53,11 +54,31 @@ public class fullTeleopTest extends OpMode {
         if(gamepad1.a){
             intake.intake();
         }
-        else if (gamepad1.b) {
+        else if(gamepad1.b) {
             intake.outtake();
+        }
+        else if(gamepad1.left_bumper){
+            intake.flowerIntake();
         }
         else {
             intake.stopMotor();
+        }
+
+        if(gamepad1.y){
+            feeder.feedForward();
+        }
+        else if(gamepad1.x){
+            feeder.feedBackward();
+        }
+        else{
+            feeder.stopMotor();
+        }
+
+        if(gamepad1.right_trigger_pressed){
+            shooter.outtake();
+        }
+        else{
+            shooter.stopMotor();
         }
     }
 }
